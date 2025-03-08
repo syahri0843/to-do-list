@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="tabs">
+            <button class="tab active">Pribadi</button>
+            <button class="tab">Wishlist</button>
+            <div class="tab-container">
+                <button class="tab">Hari Ulang Tahun</button>
+                <button class="menu-btn">⋮</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <img src="undraw.png" alt="Ilustrasi To-Do List" class="illustration">
+        <p>Tidak ada tugas dalam kategori ini.<br>Klik + untuk membuat tugasmu</p>
+    </main>
+
+    <footer>
+        <nav>
+            <button class="nav-btn menu-toggle">☰</button>
+            <button class="nav-btn active">Tugas</button>
+            <button class="nav-btn">Kalender</button>
+            <button class="nav-btn">Milikku</button>
+        </nav>
+    </footer>
+
+    <!-- Tombol Tambah Pindah ke Atas Milikku -->
+    <button class="add-btn">+</button>
+
+    <!-- Sidebar Menu -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>To-Do List</h2>
+            <button class="close-sidebar">✖</button>
+        </div>
+        <ul>
+            <li><span>👑</span> Menjadi PRO</li>
+            <li><span>⭐</span> Bintangi Tugas</li>
+            <li><span>📂</span> Kategori</li>
+            <li class="theme-toggle"><span>🎨</span> Tema</li>
+            <li><span>📅</span> Widget</li>
+            <li><span>💙</span> Sumbang</li>
+            <li><span>📊</span> Aplikasi Keluarga</li>
+            <li><span>✏️</span> Kritik saran</li>
+            <li class="faq-toggle"><span>❓</span> Tanya-Jawab
+                <ul class="faq-list">
+                    <li>
+                        <button class="faq-question">Bagaimana cara menambahkan tugas?</button>
+                        <p class="faq-answer">Klik tombol + di bagian bawah, lalu isi detail tugas.</p>
+                    </li>
+                    <li>
+                        <button class="faq-question">Bagaimana cara mengubah tema?</button>
+                        <p class="faq-answer">Buka menu sidebar, lalu pilih Tema → Terang atau Gelap.</p>
+                    </li>
+                </ul>
+            </li>
+            <li><span>⚙️</span> Pengaturan</li>
+        </ul>
+    </div>
+
+    <!-- Overlay untuk menutup sidebar -->
+    <div class="overlay"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
