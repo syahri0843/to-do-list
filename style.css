@@ -6,7 +6,7 @@
     font-family: sans-serif;
 }
 
-/* Background */
+/* Struktur dasar */
 body {
     background-color: #ffffff;
     display: flex;
@@ -87,7 +87,7 @@ p {
     margin-bottom: 20px;
 }
 
-/* Tombol Tambah (Dipindahkan ke atas Milikku) */
+/* Tombol Tambah */
 .add-btn {
     position: fixed;
     bottom: 60px;
@@ -169,7 +169,7 @@ nav {
     font-size: 18px;
 }
 
-/* Overlay untuk menutup sidebar */
+/* Overlay */
 .overlay {
     position: fixed;
     top: 0;
@@ -192,6 +192,7 @@ nav {
     visibility: visible;
     opacity: 1;
 }
+
 /* FAQ Dropdown */
 .faq-list {
     display: none;
@@ -214,4 +215,52 @@ nav {
     font-size: 12px;
     color: gray;
     padding: 5px 10px;
+}
+
+/* Tooltip (Gelembung Info) */
+.floating-tooltip {
+    position: fixed;
+    bottom: 120px; /* Sesuaikan dengan tombol + */
+    right: 20px;
+    background-color: #facc15; /* Warna kuning */
+    color: #444;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    max-width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: float 2s ease-in-out infinite;
+}
+
+/* Efek melayang */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Panah kecil di bawah tooltip */
+.floating-tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #facc15 transparent transparent transparent;
+}
+/* Panah berbentuk kerucut */
+.tooltip-arrow {
+    position: absolute;
+    bottom: -12px; /* Geser ke bawah agar lebih menempel */
+    right: 20px;  /* Posisi lebih dekat ke tombol + */
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #facc15; /* Warna sama dengan tooltip */
 }

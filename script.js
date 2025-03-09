@@ -38,3 +38,13 @@ faqQuestions.forEach(question => {
         answer.classList.toggle("show");
     });
 });
+const tooltip = document.querySelector(".floating-tooltip");
+const addButton = document.querySelector(".add-btn");
+
+addButton.addEventListener("click", () => {
+    tooltip.style.opacity = "0";
+    tooltip.style.transform = "translateY(10px)";
+    setTimeout(() => {
+        tooltip.style.display = "none";
+    }, 500); // Hilang setelah 0.5 detik
+});
